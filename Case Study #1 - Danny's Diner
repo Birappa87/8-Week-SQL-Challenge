@@ -16,7 +16,7 @@
 
 -- How many days each customer spent at restaurent 
 SELECT
-	s.customer_id,
+    s.customer_id,
     COUNT(DISTINCT s.order_date) AS total_days_spent
 FROM dannys_diner.sales AS s
 GROUP BY s.customer_id
@@ -25,7 +25,7 @@ ORDER BY total_days_spent DESC
 
 -- What was the first item from the menu purchased by each customer?
 SELECT
- 	DISTINCT s.customer_id,
+    DISTINCT s.customer_id,
     s.order_date,	
     m.product_name
 FROM dannys_diner.sales as s
